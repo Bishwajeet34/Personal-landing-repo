@@ -3,120 +3,141 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>छोटी कहानी, बड़ी सीख — सभी लिंक</title>
+  <title>छोटी कहानी, बड़ी सीख — Links</title>
+  <meta name="description" content="छोटी कहानी, बड़ी सीख — Instagram, YouTube, Facebook links." />
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
     body{
-      font-family:Inter, system-ui, Arial;
-      background:linear-gradient(180deg,#fdfbfb,#ebedee);
+      font-family:Inter, system-ui, Arial, sans-serif;
+      background:#ffffff;
+      color:#111;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:0;
+      margin:0;
+    }
+
+    /* Container fills full width and centers vertically */
+    .page {
       min-height:100vh;
       display:flex;
       flex-direction:column;
-      align-items:center;
+      align-items:stretch; /* allow full-width children */
       justify-content:center;
-      padding:16px;
-      color:#222;
+      padding:18px;
+      background: #ffffff;
     }
+
     .hero{
       text-align:center;
-      margin-bottom:20px;
+      padding:8px 0 6px 0;
     }
     .logo{
-      width:110px;height:110px;margin:0 auto 12px auto;
+      width:96px;height:96px;margin:0 auto 10px auto;
       border-radius:50%;
       background:#19547b;
       display:flex;align-items:center;justify-content:center;
       color:white;font-weight:800;font-size:16px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
     }
-    h1{font-size:28px;margin-bottom:6px}
-    p.tag{color:#555;font-size:16px}
+    h1{font-size:22px;margin:6px 0}
+    p.tag{color:#555;font-size:15px;margin:0}
+
+    /* Links column full-width */
     .links{
+      width:100%;
       display:flex;
       flex-direction:column;
-      gap:16px;
-      width:100%;
-      max-width:500px;
-      margin-top:10px;
+      gap:12px;
+      margin-top:14px;
     }
+
+    /* Each button stretches edge-to-edge of viewport minus padding */
     .btn{
       display:flex;align-items:center;gap:14px;
-      padding:18px;
-      border-radius:14px;
+      padding:16px;
+      border-radius:12px;
       text-decoration:none;color:#111;
-      background:#fff;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      font-size:18px;font-weight:600;
-      transition:all 0.2s ease;
+      background:#f8f8f8;
+      box-shadow:0 4px 10px rgba(0,0,0,0.04);
+      font-size:17px;font-weight:700;
+      width:100%;
+      transition:transform .14s ease, box-shadow .14s ease;
     }
-    .btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 6px 16px rgba(0,0,0,0.12);
+    .btn:active{transform:translateY(1px)}
+    .btn:hover{box-shadow:0 6px 16px rgba(0,0,0,0.08)}
+    .btn svg{width:42px;height:42px;flex-shrink:0}
+    .meta{flex:1;text-align:left}
+    .meta .title{font-size:18px;margin-bottom:3px}
+    .meta .sub{font-size:13px;color:#666}
+
+    /* Make open control visually integrated (not separate small button) */
+    .open-label{
+      background:#e9e9e9;padding:8px 12px;border-radius:8px;font-weight:700;
+      font-size:14px;margin-left:8px;
     }
-    .btn svg{width:38px;height:38px;flex-shrink:0}
-    .meta{flex-grow:1}
-    .meta .title{font-size:19px;font-weight:700}
-    .meta .sub{font-size:14px;color:#666;margin-top:2px}
-    .openbtn{
-      margin-left:auto;
-      padding:8px 14px;
-      border-radius:8px;
-      border:0;
-      background:#f3f3f3;
-      cursor:pointer;
-      font-weight:700;
-      font-size:14px;
+
+    /* Larger tap targets on small screens */
+    @media (max-width:480px){
+      .page{padding:12px}
+      .logo{width:88px;height:88px}
+      h1{font-size:20px}
+      .btn{padding:18px;font-size:18px;border-radius:14px}
+      .btn svg{width:46px;height:46px}
+      .meta .title{font-size:19px}
+      .meta .sub{font-size:14px}
+      .open-label{font-size:15px;padding:10px 14px}
     }
-    .footer{
-      margin-top:20px;
-      text-align:center;
-      font-size:14px;
-      color:#777;
+
+    /* Desktop minor adjustments */
+    @media (min-width:900px){
+      .page{padding:28px}
+      .links{max-width:700px;margin:12px auto 0 auto}
     }
+
+    .footer{margin-top:18px;text-align:center;color:#666;font-size:13px;padding-bottom:10px}
   </style>
 </head>
 <body>
-  <div class="hero">
-    <div class="logo">छोटी कहानी</div>
-    <h1>छोटी कहानी, बड़ी सीख</h1>
-    <p class="tag">हर reel में एक छोटी कहानी — और एक बड़ी सीख ✨</p>
-  </div>
+  <div class="page" role="main" aria-label="छोटी कहानी, बड़ी सीख links">
+    <div class="hero">
+      <div class="logo">छोटी कहानी</div>
+      <h1>छोटी कहानी, बड़ी सीख</h1>
+      <p class="tag">हर reel में एक छोटी कहानी — और एक बड़ी सीख</p>
+    </div>
 
-  <div class="links">
-    <a class="btn" href="https://www.youtube.com/@ChhotiKahaniBadiSeekh-c1e4v" target="_blank">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2c-.3-1.3-1.3-2.3-2.6-2.6C18.6 3 12 3 12 3s-6.6 0-8.9.6C1.8 3.9.8 4.9.5 6.2.1 7.7.1 12 .1 12s0 4.3.4 5.8c.3 1.3 1.3 2.3 2.6 2.6C5.4 21 12 21 12 21s6.6 0 8.9-.6c1.3-.3 2.3-1.3 2.6-2.6.4-1.5.4-6 .4-6s0-4.3-.4-5.8z" fill="#FF0000"/><path d="M9.8 15.5l6.4-3.5-6.4-3.5v7z" fill="#fff"/></svg>
-      <div class="meta"><div class="title">YouTube</div><div class="sub">Reels & Shorts</div></div>
-      <button class="openbtn" onclick="openLink(event,'https://www.youtube.com/@ChhotiKahaniBadiSeekh-c1e4v')">Open</button>
-    </a>
+    <div class="links">
+      <a class="btn" href="https://www.youtube.com/@ChhotiKahaniBadiSeekh-c1e4v" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2c-.3-1.3-1.3-2.3-2.6-2.6C18.6 3 12 3 12 3s-6.6 0-8.9.6C1.8 3.9.8 4.9.5 6.2.1 7.7.1 12 .1 12s0 4.3.4 5.8c.3 1.3 1.3 2.3 2.6 2.6C5.4 21 12 21 12 21s6.6 0 8.9-.6c1.3-.3 2.3-1.3 2.6-2.6.4-1.5.4-6 .4-6s0-4.3-.4-5.8z" fill="#FF0000"/><path d="M9.8 15.5l6.4-3.5-6.4-3.5v7z" fill="#fff"/></svg>
+        <div class="meta"><div class="title">YouTube</div><div class="sub">Reels & Shorts</div></div>
+        <div class="open-label">Open</div>
+      </a>
 
-    <a class="btn" href="https://www.instagram.com/chhoti_kahani_badi_seekh_/" target="_blank">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" fill="#000" opacity="0.05"/><path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zM18.4 6.4a1.12 1.12 0 1 0 .002 2.24A1.12 1.12 0 0 0 18.4 6.4z" stroke="#E1306C" stroke-width="1.2" fill="none"/></svg>
-      <div class="meta"><div class="title">Instagram</div><div class="sub">Reels</div></div>
-      <button class="openbtn" onclick="openLink(event,'https://www.instagram.com/chhoti_kahani_badi_seekh_/')">Open</button>
-    </a>
+      <a class="btn" href="https://www.instagram.com/chhoti_kahani_badi_seekh_/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" fill="#000" opacity="0.05"/><path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zM18.4 6.4a1.12 1.12 0 1 0 .002 2.24A1.12 1.12 0 0 0 18.4 6.4z" stroke="#E1306C" stroke-width="1.2" fill="none"/></svg>
+        <div class="meta"><div class="title">Instagram</div><div class="sub">Reels</div></div>
+        <div class="open-label">Open</div>
+      </a>
 
-    <a class="btn" href="https://www.facebook.com/profile.php?id=61580380586919" target="_blank">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 4.9 3.5 8.9 8 9.8v-6.9H8.5v-2.9H10V9.5c0-1.5.9-2.3 2.2-2.3.6 0 1.3.1 1.9.2v2.1h-1c-1 0-1.3.6-1.3 1.2v1.5h2.5l-.4 2.9h-2.1v6.9c4.5-.9 8-4.9 8-9.8z" fill="#1877F2"/></svg>
-      <div class="meta"><div class="title">Facebook Page</div><div class="sub">Official</div></div>
-      <button class="openbtn" onclick="openLink(event,'https://www.facebook.com/profile.php?id=61580380586919')">Open</button>
-    </a>
+      <a class="btn" href="https://www.facebook.com/profile.php?id=61580380586919" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 4.9 3.5 8.9 8 9.8v-6.9H8.5v-2.9H10V9.5c0-1.5.9-2.3 2.2-2.3.6 0 1.3.1 1.9.2v2.1h-1c-1 0-1.3.6-1.3 1.2v1.5h2.5l-.4 2.9h-2.1v6.9c4.5-.9 8-4.9 8-9.8z" fill="#1877F2"/></svg>
+        <div class="meta"><div class="title">Facebook Page</div><div class="sub">Official</div></div>
+        <div class="open-label">Open</div>
+      </a>
 
-    <a class="btn" href="https://www.facebook.com/profile.php?id=61580141198622" target="_blank">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zM4 20c0-3.3 2.7-6 6-6h4c3.3 0 6 2.7 6 6v1H4v-1z" fill="#3b5998"/></svg>
-      <div class="meta"><div class="title">Facebook Account</div><div class="sub">Personal</div></div>
-      <button class="openbtn" onclick="openLink(event,'https://www.facebook.com/profile.php?id=61580141198622')">Open</button>
-    </a>
-  </div>
+      <a class="btn" href="https://www.facebook.com/profile.php?id=61580141198622" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zM4 20c0-3.3 2.7-6 6-6h4c3.3 0 6 2.7 6 6v1H4v-1z" fill="#3b5998"/></svg>
+        <div class="meta"><div class="title">Facebook Account</div><div class="sub">Personal</div></div>
+        <div class="open-label">Open</div>
+      </a>
+    </div>
 
-  <div class="footer">
-    Made with ❤️ for <strong>छोटी कहानी, बड़ी सीख</strong>
+    <div class="footer">Made with ❤️ for <strong>छोटी कहानी, बड़ी सीख</strong></div>
   </div>
 
   <script>
-    function openLink(e, url){
-      e.stopPropagation();
-      window.open(url, '_blank', 'noopener');
-    }
+    // No popup-block-prone JS navigation — links are standard <a href> so mobile will open normally.
   </script>
 </body>
 </html>
