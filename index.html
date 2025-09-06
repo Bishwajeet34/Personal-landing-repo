@@ -8,32 +8,73 @@
   <style>
     :root{--bg1:#ffecd2;--bg2:#fcb69f;--card:#ffffff;--accent:#ff5757}
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', Arial;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#222}
-    .wrap{width:100%;max-width:520px;margin:24px;padding:28px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));box-shadow:0 10px 30px rgba(0,0,0,0.12);}
+    html,body{height:100%;margin:0;padding:0}
+    body{
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', Arial;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,var(--bg1),var(--bg2));
+      color:#222;
+      padding:12px;
+    }
+    .wrap{
+      width:100%;
+      max-width:960px;
+      padding:24px;
+      border-radius:18px;
+      background:rgba(255,255,255,0.96);
+      box-shadow:0 8px 28px rgba(0,0,0,0.1);
+    }
     .hero{display:flex;gap:16px;align-items:center}
-    .logo{width:86px;height:86px;border-radius:18px;background:linear-gradient(135deg,#ffd89b,#19547b);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
-    h1{margin:0;font-size:20px}
-    p.tag{margin:6px 0 0 0;color:#444}
-    .links{margin-top:20px;display:flex;flex-direction:column;gap:12px}
-    .btn{display:flex;align-items:center;gap:12px;padding:14px;border-radius:12px;text-decoration:none;color:inherit;background:var(--card);box-shadow:0 6px 18px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04)}
-    .btn svg{width:28px;height:28px;flex:0 0 28px}
+    .logo{
+      width:90px;height:90px;border-radius:16px;
+      background:linear-gradient(135deg,#ffd89b,#19547b);
+      display:flex;align-items:center;justify-content:center;
+      color:white;font-weight:800;font-size:18px;
+      flex-shrink:0;
+    }
+    h1{margin:0;font-size:26px}
+    p.tag{margin:6px 0 0 0;color:#444;font-size:18px}
+    .links{margin-top:22px;display:flex;flex-direction:column;gap:16px}
+    .btn{
+      display:flex;align-items:center;gap:16px;
+      padding:16px 18px;
+      border-radius:14px;
+      text-decoration:none;color:inherit;
+      background:var(--card);
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      border:1px solid rgba(0,0,0,0.05);
+      min-height:80px;
+      font-size:18px;
+    }
+    .btn svg{width:42px;height:42px;flex:0 0 42px}
     .btn .meta{display:flex;flex-direction:column}
-    .btn .meta .title{font-weight:700}
-    .btn .meta .sub{font-size:13px;color:#666}
-    .small{margin-top:18px;font-size:13px;color:#555}
-    .footer{margin-top:18px;text-align:center;font-size:13px;color:#666}
-    .openbtn{margin-left:auto;padding:6px 10px;border-radius:8px;border:0;background:#f3f3f3;cursor:pointer}
-    @media (max-width:420px){.wrap{padding:18px}}
+    .btn .meta .title{font-weight:800;font-size:20px}
+    .btn .meta .sub{font-size:16px;color:#666;margin-top:4px}
+    .openbtn{
+      margin-left:auto;
+      padding:10px 16px;
+      border-radius:10px;
+      border:0;
+      background:#f3f3f3;
+      cursor:pointer;
+      font-weight:700;
+      font-size:16px;
+    }
+    .footer{margin-top:20px;text-align:center;font-size:15px;color:#666}
+    @media (max-width:480px){
+      h1{font-size:24px}
+      p.tag{font-size:16px}
+      .btn{min-height:88px;font-size:17px}
+      .btn .meta .title{font-size:19px}
+      .btn .meta .sub{font-size:15px}
+      .btn svg{width:44px;height:44px}
+    }
   </style>
 </head>
 <body>
-  <!--
-    UPDATED INSTRUCTIONS:
-    - Instagram, YouTube, Facebook Page and Facebook Account links pre-filled.
-    - Telegram/Other section removed as requested.
-    - Small action buttons changed from "Copy" to "Open".
-    - To deploy on GitHub Pages: create repo, add this index.html, push, enable Pages (see README).
-  -->
   <div class="wrap">
     <div class="hero">
       <div class="logo">छोटी कहानी</div>
@@ -42,43 +83,46 @@
         <p class="tag">हर reel में एक छोटी कहानी — और एक बड़ी सीख ✨</p>
       </div>
     </div>
+
     <div class="links">
       <!-- YouTube -->
-      <a class="btn" id="yt" href="https://www.youtube.com/@ChhotiKahaniBadiSeekh-c1e4v" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2c-.3-1.3-1.3-2.3-2.6-2.6C18.6 3 12 3 12 3s-6.6 0-8.9.6C1.8 3.9.8 4.9.5 6.2.1 7.7.1 12 .1 12s0 4.3.4 5.8c.3 1.3 1.3 2.3 2.6 2.6C5.4 21 12 21 12 21s6.6 0 8.9-.6c1.3-.3 2.3-1.3 2.6-2.6.4-1.5.4-6 .4-6s0-4.3-.4-5.8z" fill="#FF0000"/><path d="M9.8 15.5l6.4-3.5-6.4-3.5v7z" fill="#fff"/></svg>
-        <div class="meta"><div class="title">YouTube</div><div class="sub">Reels & Shorts — छोटी कहानी, बड़ी सीख</div></div>
+      <a class="btn" href="https://www.youtube.com/@ChhotiKahaniBadiSeekh-c1e4v" target="_blank">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2c-.3-1.3-1.3-2.3-2.6-2.6C18.6 3 12 3 12 3s-6.6 0-8.9.6C1.8 3.9.8 4.9.5 6.2.1 7.7.1 12 .1 12s0 4.3.4 5.8c.3 1.3 1.3 2.3 2.6 2.6C5.4 21 12 21 12 21s6.6 0 8.9-.6c1.3-.3 2.3-1.3 2.6-2.6.4-1.5.4-6 .4-6s0-4.3-.4-5.8z" fill="#FF0000"/><path d="M9.8 15.5l6.4-3.5-6.4-3.5v7z" fill="#fff"/></svg>
+        <div class="meta"><div class="title">YouTube</div><div class="sub">Reels & Shorts</div></div>
         <button class="openbtn" onclick="openLink(event,'https://www.youtube.com/@ChhotiKahaniBadiSeekh-c1e4v')">Open</button>
       </a>
+
       <!-- Instagram -->
-      <a class="btn" id="ig" href="https://www.instagram.com/chhoti_kahani_badi_seekh_/" target="_blank" rel="noopener">
+      <a class="btn" href="https://www.instagram.com/chhoti_kahani_badi_seekh_/" target="_blank">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" fill="#000" opacity="0.05"/><path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zM18.4 6.4a1.12 1.12 0 1 0 .002 2.24A1.12 1.12 0 0 0 18.4 6.4z" stroke="#E1306C" stroke-width="1.2" fill="none"/></svg>
-        <div class="meta"><div class="title">Instagram</div><div class="sub">Reels — छोटी कहानी, बड़ी सीख</div></div>
+        <div class="meta"><div class="title">Instagram</div><div class="sub">Reels</div></div>
         <button class="openbtn" onclick="openLink(event,'https://www.instagram.com/chhoti_kahani_badi_seekh_/')">Open</button>
       </a>
+
       <!-- Facebook Page -->
-      <a class="btn" id="fbpage" href="https://www.facebook.com/profile.php?id=61580380586919" target="_blank" rel="noopener">
+      <a class="btn" href="https://www.facebook.com/profile.php?id=61580380586919" target="_blank">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 4.9 3.5 8.9 8 9.8v-6.9H8.5v-2.9H10V9.5c0-1.5.9-2.3 2.2-2.3.6 0 1.3.1 1.9.2v2.1h-1c-1 0-1.3.6-1.3 1.2v1.5h2.5l-.4 2.9h-2.1v6.9c4.5-.9 8-4.9 8-9.8z" fill="#1877F2"/></svg>
-        <div class="meta"><div class="title">Facebook Page</div><div class="sub">Official Page</div></div>
+        <div class="meta"><div class="title">Facebook Page</div><div class="sub">Official</div></div>
         <button class="openbtn" onclick="openLink(event,'https://www.facebook.com/profile.php?id=61580380586919')">Open</button>
       </a>
+
       <!-- Facebook Account -->
-      <a class="btn" id="fbacc" href="https://www.facebook.com/profile.php?id=61580141198622" target="_blank" rel="noopener">
+      <a class="btn" href="https://www.facebook.com/profile.php?id=61580141198622" target="_blank">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zM4 20c0-3.3 2.7-6 6-6h4c3.3 0 6 2.7 6 6v1H4v-1z" fill="#3b5998"/></svg>
-        <div class="meta"><div class="title">Facebook Account</div><div class="sub">Personal Profile</div></div>
+        <div class="meta"><div class="title">Facebook Account</div><div class="sub">Personal</div></div>
         <button class="openbtn" onclick="openLink(event,'https://www.facebook.com/profile.php?id=61580141198622')">Open</button>
       </a>
     </div>
-    <div class="small">नोट: यह पेज GitHub पर deploy करने के लिए तैयार है — index.html में दी गए लिंक बदलने की ज़रूरत नहीं है क्योंकि अब सभी असली links भरे गए हैं।</div>
+
     <div class="footer">
       <div>Made with ❤️ for <strong>छोटी कहानी, बड़ी सीख</strong></div>
-      <div style="margin-top:8px;font-size:12px;color:#888">GitHub Pages पर डिप्लॉय करने के लिए: नई repository बनाइए → इस फाइल को "index.html" नाम से रखें → push करें → Settings → Pages → branch चुनकर Publish करें।</div>
     </div>
   </div>
+
   <script>
     function openLink(e, url){
       e.stopPropagation();
-      try{window.open(url, '_blank', 'noopener');}
-      catch(err){window.location.href = url;}
+      window.open(url, '_blank', 'noopener');
     }
   </script>
 </body>
